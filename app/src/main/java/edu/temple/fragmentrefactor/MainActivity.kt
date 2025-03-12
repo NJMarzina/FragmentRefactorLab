@@ -11,6 +11,14 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        val fragment = MainFragment()
+
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.fragment_container, fragment)
+            .commit()
+
+    /*
+
         val displayTextView = findViewById<TextView>(R.id.displayTextView)
         val nameEditText = findViewById<EditText>(R.id.nameEditText)
         val changeButton = findViewById<Button>(R.id.changeButton)
@@ -24,5 +32,7 @@ class MainActivity : AppCompatActivity() {
                 "Please enter your name"
             }
         }
+    */
+
     }
 }
